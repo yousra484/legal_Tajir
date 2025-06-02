@@ -27,10 +27,17 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Contact form submitted:', formData);
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi de l\'email');
+      }
       
       toast({
         title: t('contact.toast.success.title'),
@@ -39,6 +46,7 @@ const Contact = () => {
 
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Erreur:', error);
       toast({
         title: t('contact.toast.error.title'),
         description: t('contact.toast.error.desc'),
@@ -149,31 +157,35 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center">
-                        <MessageSquare className="h-6 w-6 text-gold-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900">WhatsApp</h3>
-                        <p className="text-gray-600">+213 123 456 789</p>
-                        <p className="text-sm text-gray-500">
-                          {language === 'ar' ? 'متاح 24/7' : 'Disponible 24h/7j'}
-                        </p>
-                      </div>
-                    </div>
-
+                   
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center">
                         <Mail className="h-6 w-6 text-gold-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">Email</h3>
-                        <p className="text-gray-600">contact@legaltajir.dz</p>
+                        <p className="text-gray-600">contact@legaltajir.online</p>
                         <p className="text-sm text-gray-500">
                           {language === 'ar' ? 'رد خلال 24 ساعة' : 'Réponse sous 24h'}
                         </p>
                       </div>
                     </div>
+
+
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center">
+                        <MessageSquare className="h-6 w-6 text-gold-600" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900">WhatsApp</h3>
+                        <p className="text-gray-600">+213 xxx xxx xxx</p>
+                        <p className="text-sm text-gray-500">
+                          {language === 'ar' ? 'متاح 24/7' : 'Disponible 24h/7j'}
+                        </p>
+                      </div>
+                    </div>
+
+
 
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center">
@@ -183,7 +195,7 @@ const Contact = () => {
                         <h3 className="font-semibold text-gray-900">
                           {language === 'ar' ? 'هاتف' : 'Téléphone'}
                         </h3>
-                        <p className="text-gray-600">+213 31 234 567</p>
+                        <p className="text-gray-600">+213 xxx xxx xxx</p>
                         
                       </div>
                     </div>
