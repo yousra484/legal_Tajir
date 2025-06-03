@@ -281,8 +281,8 @@ const translations = {
 'privacy.rights.list.item5': 'تقديم شكوى للسلطات المختصة',
 'privacy.contact.title': 'تواصل معنا',
 'privacy.contact.description': 'لأي استفسارات حول هذه السياسة، يرجى التواصل معنا على:',
-'privacy.contact.email': 'privacy@legaltajir.dz',
-'privacy.contact.phone': '+213 123 456 789',
+'privacy.contact.email': 'contact@legaltajir.online',
+'privacy.contact.phone': '+213 xxx xxx xxx',
 'privacy.contact.address': 'كلية الحقوق - تلمسان منصورة', 
 'privacy.lastUpdate': 'آخر تحديث: ماي 2025',
 
@@ -525,8 +525,8 @@ const translations = {
      'privacy.rights.list.item5': 'Porter plainte auprès des autorités compétentes',
      'privacy.contact.title': 'Nous Contacter',
      'privacy.contact.description': 'Pour toute question concernant cette politique, contactez-nous :',
-     'privacy.contact.email': 'privacy@legaltajir.dz',
-     'privacy.contact.phone': '+213 123 456 789',
+     'privacy.contact.email': 'contact@legaltajir.online',
+     'privacy.contact.phone': '+213 xxx xxx xxx ',
      'privacy.contact.address': 'Faculté de droit - Tlemcen Mansourah',
      'privacy.lastUpdate': 'Dernière mise à jour : Mai 2025',
 

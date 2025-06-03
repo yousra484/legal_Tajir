@@ -395,10 +395,10 @@ const LegalConsultation = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                    WhatsApp: +213 123 456 789
+                    WhatsApp: +213 xxx xxx xxx 
                   </Button>
                   <Button variant="outline" className="w-full">
-                    Email: contact@legaltajir.dz
+                    Email: contact@legaltajir.online
                   </Button>
                 </CardContent>
               </Card>
